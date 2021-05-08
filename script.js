@@ -1,16 +1,16 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
-var delbutton = document.querySelectorAll(".delete");
-var reset = document.querySelector(".reset");
+let button = document.getElementById("enter");
+let input = document.getElementById("userinput");
+let ul = document.querySelector("ul");
+let delbutton = document.querySelectorAll(".delete");
+let reset = document.querySelector(".reset");
 
 function inputLength() {
     return input.value.length;
 }
 
 function creatListElement() {
-    var li = document.createElement("li");
-    var newbutton = document.createElement("button");
+    let li = document.createElement("li");
+    let newbutton = document.createElement("button");
     newbutton.appendChild(document.createTextNode("Del"));
     newbutton.classList.add("delete");
     li.appendChild(newbutton);
