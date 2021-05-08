@@ -10,7 +10,10 @@ function inputLength() {
 
 function creatListElement() {
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
+    var newbutton = document.createElement("button");
+    newbutton.appendChild(document.createTextNode("Del"));
+    li.appendChild(newbutton);
+    li.appendChild(document.createTextNode(" " + input.value));
     ul.appendChild(li);
     input.value = "";
 }
