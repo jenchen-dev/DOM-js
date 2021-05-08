@@ -12,8 +12,10 @@ function creatListElement() {
     var li = document.createElement("li");
     var newbutton = document.createElement("button");
     newbutton.appendChild(document.createTextNode("Del"));
+    newbutton.classList.add("delete");
     li.appendChild(newbutton);
     li.appendChild(document.createTextNode(" " + input.value));
+    li.classList.add("li-wrapper");
     ul.appendChild(li);
     input.value = "";
 }
@@ -36,16 +38,9 @@ function toggleListItem(element) {
     }
 }
 
-function deleteListElement() {
-    var items = document.querySelectorAll(".li-wrapper");
-    for (var ind = 0; ind < items.length; ind++) {
-        this.parentNode.remove();
-    }
-}
-
-function deleteListAfterClick() {
-    for (var i = 0; i < delbutton.length; i++) {
-        delbutton[i].addEventListener("click", deleteListElement);
+function deleteListElement(element) {
+    if (element.target.className === "delete"){
+        element.target.parentElement.remove();
     }
 }
 
@@ -56,6 +51,5 @@ function deleteAllList() {
 button.addEventListener("click", addListAfterClick);
 input.addEventListener("keydown", addListAfterKeydown);
 ul.addEventListener("click", toggleListItem);
+ul.addEventListener("click", deleteListElement);
 reset.addEventListener("click", deleteAllList);
-
-deleteListAfterClick();
