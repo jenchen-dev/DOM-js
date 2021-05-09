@@ -1,19 +1,18 @@
-let button = document.getElementById("enter");
-let input = document.getElementById("userinput");
-let ul = document.querySelector("ul");
-let delbutton = document.querySelectorAll(".delete");
-let reset = document.querySelector(".reset");
+const button = document.getElementById("enter");
+const input = document.getElementById("userinput");
+const ul = document.querySelector("ul");
+const reset = document.querySelector(".reset");
 
 function inputLength() {
     return input.value.length;
 }
 
 function creatListElement() {
-    let li = document.createElement("li");
-    let newbutton = document.createElement("button");
-    newbutton.appendChild(document.createTextNode("Del"));
-    newbutton.classList.add("delete");
-    li.appendChild(newbutton);
+    const li = document.createElement("li");
+    const delButton = document.createElement("button");
+    delButton.appendChild(document.createTextNode("Del"));
+    delButton.classList.add("delete");
+    li.appendChild(delButton);
     li.appendChild(document.createTextNode(" " + input.value));
     li.classList.add("li-wrapper");
     ul.appendChild(li);

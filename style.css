@@ -1,4 +1,4 @@
-.coolTitle {
+/* .coolTitle {
     text-align: center;
     font-family: 'Oswald', Helvetica, sans-serif;
     font-size: 40px;
@@ -17,7 +17,21 @@
       -8px -8px 0 firebrick,
       -30px 20px 40px dimgrey;
   }
-  
+   */
+.title {
+  color: navy;
+}
+
+hr {
+  border-color: blue;
+  border-width: 1px;
+  max-width: 300px;
+}
+
+.second {
+  font-weight: bold;
+}
+
 .done {
     text-decoration: line-through;
 }
