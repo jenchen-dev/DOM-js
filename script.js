@@ -7,7 +7,7 @@ function inputLength() {
     return input.value.length;
 }
 
-function creatListElement() {
+function createListElement() {
     const li = document.createElement("li");
     const delButton = document.createElement("button");
     delButton.appendChild(document.createTextNode("Del"));
@@ -21,13 +21,13 @@ function creatListElement() {
 
 function addListAfterClick() {
     if (inputLength() > 0) {
-        creatListElement();
+        createListElement();
     }
 }
 
 function addListAfterKeydown(Event) {
     if (inputLength() > 0 && Event.key === "Enter"){
-        creatListElement();
+        createListElement();
     }
 }
 
